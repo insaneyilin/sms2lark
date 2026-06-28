@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+data/subscribers.json
+.claude/
+server.log
+cloudflared.log
+*.log
+.DS_Store
+task.txt
