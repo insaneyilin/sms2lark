@@ -328,35 +328,7 @@ docker-compose up -d
 
 ---
 
-## 11. 项目进度
-
-| # | 任务 | 状态 | 备注 |
-|---|------|------|------|
-| 1 | 项目结构搭建 + 配置模块 | ✅ 完成 | config.py + models.py + .env.example |
-| 2 | 验证码正则解析器 | ✅ 完成 | 覆盖中英文格式，已通过样本测试 |
-| 3 | 内存 TTL 存储 | ✅ 完成 | 按 device 分组，30s 清理周期 |
-| 4 | Webhook 端点 + token 认证 | ✅ 完成 | curl 集成测试通过 |
-| 5 | 飞书消息发送 (lark_sender) | ✅ 完成 | lark-cli subprocess 封装 |
-| 6 | FastAPI 主入口 + lifespan | ✅ 完成 | 服务启动/健康检查已验证 |
-| 7 | 订阅管理模块 | ✅ 完成 | JSON 持久化，支持按设备订阅 |
-| 8 | 群聊事件监听 | ✅ 完成 | 代码完成，待配置实际群 ID 后验证 |
-| 9 | 群聊自然语言指令处理 | ✅ 完成 | 代码完成，待实际群聊测试 |
-| 10 | Dockerfile + docker-compose | ✅ 完成 | 配置 healthcheck + restart:always |
-| 11 | lark-cli 应用配置 | ⬜ 待做 | 需要 `lark-cli config init` 配置 App ID/Secret |
-| 12 | 飞书开发者后台权限配置 | ⬜ 待做 | 开通 im:message、im:message:send_as_bot 等 scope |
-| 13 | .env 实际配置填写 | ⬜ 待做 | 填入 token、设备映射、订阅者 open_id |
-| 14 | 端到端飞书推送验证 | ⬜ 待做 | 调 webhook → 验证飞书私聊收到消息 |
-| 15 | 群聊功能联调 | ⬜ 待做 | 机器人加入群 → 测试自然语言查询 |
-| 16 | 手机侧 SmsForwarder 配置 | ⬜ 待做 | 安装 App + 配置 Webhook 转发规则 |
-| 17 | Webhook URL 公网暴露 | ⬜ 待做 | cloudflared tunnel 或 ngrok |
-| 18 | 真实短信端到端测试 | ⬜ 待做 | 发短信 → 飞书 3s 内收到验证码 |
-| 19 | 7×24 稳定性验证 | ⬜ 待做 | 跑 24h 观察内存/重连/推送成功率 |
-
-**当前状态**：代码开发完成，进入配置和联调阶段。下一步是配置 lark-cli 应用 + 填写 .env + 端到端验证飞书推送。
-
----
-
-## 12. 项目文件清单
+## 11. 项目文件清单
 
 ```
 lark_agent/
